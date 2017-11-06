@@ -44,12 +44,6 @@ body {
   color: hsl(350, 10%, 23%);
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
@@ -86,13 +80,24 @@ a:hover {
   font-weight: 500;
 }
 
-/* Header Section */
-
-.container.header {
+.container {
   display: flex;
+  width: 100%;
+}
+
+.container.header,
+.container.footer {
   width: 80%;
   justify-content: space-between;
+  margin: auto;
 }
+
+.container.featured,
+.container.skills {
+  height: 30rem;
+}
+
+/* Header Section */
 
 header {
   display: flex;
@@ -128,7 +133,7 @@ div#logo {
   padding-top: 0.5rem;
 }
 
-img {
+header img {
   display: block;
   height: 3rem;
   width: auto;
@@ -190,12 +195,6 @@ nav.mobile ul {
 }
 
 /* featured section */
-
-.container.featured {
-  display: flex;
-  height: 30rem;
-  width: 100%;
-}
 
 div#featured {
   display: flex;
@@ -265,12 +264,6 @@ div#projects {
 
 /* skills section */
 
-.container.skills {
-    display: flex;
-    height: 30rem;
-    width: 100%;
-}
-
 div#skills {
     width: 60%;
     display: flex;
@@ -318,12 +311,42 @@ footer {
   color: hsl(350, 10%, 90%);
 }
 
+.footer {
+    flex-direction: column;
+}
+
+.trunk {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+div.third {
+    width: 33%;
+    display: flex;
+}
+
+.image-frame img {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 8.5rem;
+    width: 8.5rem;
+}
+
+.third p {
+    margin: 0;
+    padding-left: 1rem;
+    width: 100%;
+}
+
 footer nav {
   padding: 0;
 }
 
+.copyright {
+    display: flex;
+}
+
 @media only screen and (max-width: 480px) {
-  footer nav {
-    display: none;
-  }
+
 }

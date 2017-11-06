@@ -45,10 +45,10 @@ h2 {
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-weight: 500;
-  margin-bottom: 1.5rem;
-  padding: 2rem;
-  padding-top: 0;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 0.5rem;
 }
 
 h3 {
@@ -59,6 +59,7 @@ h3 {
 
 p {
   font-family: 'Montserrat', sans-serif;
+  margin: auto;
 }
 
 ul {
@@ -77,9 +78,15 @@ a:hover {
 
 /* Header Section */
 
+.container.header {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 4rem;
   position: fixed;
   width: 100%;
@@ -119,7 +126,6 @@ img {
 
 nav {
   display: flex;
-  padding-right: 1.5rem;
 }
 
 nav ul{
@@ -172,226 +178,47 @@ nav.mobile ul {
   }
 }
 
-/* Site Content */
+/* featured section */
 
-section,
-footer {
-  display: flex;
-  position: relative;
-  padding: 2rem 1.5rem;
-  top: 4rem;
-}
-
-section {
-  justify-content: center;
-}
-
-section:nth-child(2n+0) {
-  background-color: hsl(46, 80%, 90%);
-}
-
-section:nth-child(2n+1) {
-  background-color: hsl(71, 5%, 94%);
-}
-
-.story {
-  display: flex;
-  width: 26.4375rem;
-  height: 10.5rem;
-  border-bottom: 0.1rem solid hsla(350, 10%, 23%, 0.25);
-}
-
-.story:last-child {
-  border: none;
-}
-
-.story .img-container {
-  width: 35%;
-  height: auto;
-  margin: 1rem;
-}
-
-.img {
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.description {
+div#featured {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 65%;
+  width: 100%;
+  padding-top: 4rem;
 }
 
-.description p {
-  padding: 0.5rem 0;
-}
-
-.content h2 {
-  text-align: left;
-  padding: 0;
-}
-
-.content h3 {
-    margin-bottom: 1rem;
+#featured p {
+  font-family: 'Montserrat', sans-serif;
+  margin: auto;
+  margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 480px) {
-  section {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
 
-  aside {
-    padding: 0;
-    width: 100%;
-  }
-
-  h2 {
-    padding: 1.5rem;
-    margin: 0;
-  }
-
-  .story {
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    margin: 1rem auto;
-  }
-
-  .story .img-container {
-    width: 100%;
-    height: 14.375rem;
-    margin: 0;
-  }
-
-  .story .description {
-    padding: 1rem 1rem 0 1rem;
-  }
-
-  .img.orientation {
-    background-image: url('../images/information-orientation-mobile.jpg');
-  }
-
-  .img.campus {
-    background-image: url('../images/information-campus-mobile.jpg');
-  }
-
-  .img.lecture {
-    background-image: url('../images/information-guest-lecture-mobile.jpg');
-  }
 }
 
 @media only screen and (min-width: 481px) {
-  .img.orientation {
-    background-image: url('../images/information-orientation.jpg');
-  }
 
-  .img.campus {
-    background-image: url('../images/information-campus.jpg');
-  }
-
-  .img.lecture {
-    background-image: url('../images/information-guest-lecture.jpg');
-  }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  aside {
-    width: 30%;
-  }
 
-  .story {
-    width: 100%;
-    height: inherit;
-  }
-
-  .story .img-container {
-    display: none;
-  }
-
-  .story .description {
-    width: 100%;
-    padding: 0.5rem;
-    padding-right: 0;
-    padding-bottom: 0;
-    margin-bottom: 1rem;
-  }
 }
 
-/* Banner section */
+/* featured section */
 
-.banner {
+.container.featured {
   display: flex;
+  height: 30rem;
   width: 100%;
 }
 
-.banner .img-container {
-  width: 60%;
-}
-
-.banner .content {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 2.5rem;
-}
-
-.button {
-  padding: 0.5rem 0;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: hsl(350, 10%, 95%);
-  background-color: hsl(0, 70%, 35%);
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
-}
-
-.button:hover {
-  background-color: hsl(0, 40%, 35%);
-  font-weight: bold;
-}
-
 @media only screen and (max-width: 480px) {
-  .banner {
-    flex-direction: column;
-  }
 
-  .banner .img-container {
-    width: 100%;
-  }
-
-  .banner .content {
-    width: 100%;
-    padding: 0;
-  }
-
-  .button {
-    margin: 1.5rem;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    font-size: 1.5rem;
-  }
-
-  .banner h2 {
-    padding: 1.5rem;
-  }
-
-  .banner h3 {
-    padding: 0 1.5rem;
-  }
 }
 
 @media only screen and (min-width: 1025px) {
-  .button {
-    width: 60%;
-    margin: 1.5rem auto;
-  }
+
 }
 
 /* Projects Section */
@@ -563,6 +390,10 @@ video {
 /* Footer section */
 
 footer {
+  display: flex;
+  position: relative;
+  padding: 2rem 1.5rem;
+  top: 4rem;
   justify-content: space-between;
   background-color: hsl(193, 10%, 23%);
   color: hsl(350, 10%, 90%);

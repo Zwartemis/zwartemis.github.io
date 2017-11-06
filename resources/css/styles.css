@@ -89,7 +89,7 @@ header {
 }
 
 header a {
-  color: hsl(350, 10%, 23%);
+  color: hsl(350, 10%, 90%);
 }
 
 header a:active {
@@ -97,28 +97,24 @@ header a:active {
   font-weight: 500;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  padding-left: 1.5rem;
+div#logo {
+    display: flex;
 }
 
-.logo .icon {
-  height: 3rem;
+#logo p {
+    display: flex;
+    color: hsl(350, 10%, 90%);
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: auto;
+    padding-top: 0.5rem;
 }
 
-.logo p {
-  font-size: 2.25rem;
-  margin-top: 0.35rem;
-}
-
-.logo p span {
-  font-weight: bold;
-}
-
-img.icon {
-    width: inherit;
-    padding-right: 0.35rem;
+img {
+    display: block;
+    height: 3rem;
+    width: auto;
+    margin: auto;
 }
 
 nav {
@@ -133,10 +129,16 @@ nav ul{
 
 nav ul li {
   padding: 0 0.5rem;
+  margin: 0 0.5rem;
 }
 
-nav.desktop ul li:last-child {
-  padding-right: 0;
+nav ul li:nth-child(3) {
+  background-color: hsl(87, 82%, 39%);
+  margin-right: 0;
+}
+
+nav ul li:hover {
+  background-color: hsl(174, 84%, 30%);
 }
 
 nav.mobile {

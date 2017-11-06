@@ -7,6 +7,15 @@ div, nav, span, footer, h2, h3, h4, h5, p, li, ul, ol, img, section {
 /*Delete above here before publishing */
 
 /* Fonts */
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v11/IVeH6A3MiFyaSEiudUMXEweOulFbQKHxPa89BaxZzA0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -30,6 +39,7 @@ html {
 }
 
 body {
+  font-weight: 300;
   line-height: 1.45rem;
   color: hsl(350, 10%, 23%);
 }
@@ -105,23 +115,24 @@ header a:active {
 }
 
 div#logo {
-    display: flex;
+  display: flex;
+  font-weight: 400;
 }
 
 #logo p {
-    display: flex;
-    color: hsl(350, 10%, 90%);
-    text-transform: uppercase;
-    font-size: 2rem;
-    margin: auto;
-    padding-top: 0.5rem;
+  display: flex;
+  color: hsl(350, 10%, 90%);
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: auto;
+  padding-top: 0.5rem;
 }
 
 img {
-    display: block;
-    height: 3rem;
-    width: auto;
-    margin: auto;
+  display: block;
+  height: 3rem;
+  width: auto;
+  margin: auto;
 }
 
 nav {
@@ -180,6 +191,12 @@ nav.mobile ul {
 
 /* featured section */
 
+.container.featured {
+  display: flex;
+  height: 30rem;
+  width: 100%;
+}
+
 div#featured {
   display: flex;
   flex-direction: column;
@@ -205,14 +222,6 @@ div#featured {
 
 }
 
-/* featured section */
-
-.container.featured {
-  display: flex;
-  height: 30rem;
-  width: 100%;
-}
-
 @media only screen and (max-width: 480px) {
 
 }
@@ -227,164 +236,75 @@ div#featured {
     background-image: url(../images/2FMD2R7.png);
 }
 div#projects {
-    display: flex;
-    width: 52rem;
-    margin: auto;
-    flex-flow: row wrap;
+  display: flex;
+  width: 52rem;
+  margin: auto;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .project {
-    width: 33%;
+  width: 32.5%;
+  display: flex;
+  flex-flow: row wrap;
+  height: 17rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0.15rem;
+  background-color: hsl(87, 82%, 39%);
+  color: hsl(193, 69%, 98%);
+}
+
+@media only screen and (max-width: 480px) {
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+
+/* skills section */
+
+.container.skills {
     display: flex;
-    flex-flow: row wrap;
-    height: 17rem;
-    align-items: center;
-    justify-content: center;
+    height: 30rem;
+    width: 100%;
+}
+
+div#skills {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
     margin: auto;
+}
+
+#skills h2 {
+    margin-left: 0;
+    padding: 0.5rem;
     background-color: hsl(87, 82%, 39%);
+    text-transform: uppercase;
     color: hsl(193, 69%, 98%);
 }
 
-@media only screen and (max-width: 480px) {
-
+#skills ul {
+    list-style-type: disc;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    padding-left: 2rem;
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-
-}
-
-/* Courses section */
-
-section#catalog {
-  display: block;
-}
-
-.courses {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.class {
-  width: 29%;
-  margin: 0 1rem 1rem 1rem;
-  background-color: hsl(71, 5%, 94%);
-  box-shadow: 0.25rem 0.25rem 1rem hsla(350, 10%, 23%, 0.5);
-}
-
-.class .description {
-  padding: 1rem;
-}
-
-.class p {
-  padding: 0.5rem 0;
-}
-
-.class:hover {
-    background-color: hsla(0, 70%, 35%, 0.3);
-}
-
-.category {
-  text-transform: uppercase;
+#skills p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: 0.75rem;
 }
 
 @media only screen and (max-width: 480px) {
-  .class .img-container {
-    display: none;
-  }
 
-  .class {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-
-  .class:active {
-      background-color: hsla(0, 70%, 35%, 0.3);
-  }
-
-  .class:last-child {
-    margin-bottom: 2rem;
-  }
-
-  .class h3 {
-    text-align: center;
-    width: 100%;
-  }
-
-  .class .description {
-    margin: 0 auto;
-  }
-
-  .class .description p {
-    display: none;
-  }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 837px) {
-  .class {
-    width: 45%;
-  }
 
-  .courses .description p {
-    display: none;
-  }
-}
-
-/* Thesis section */
-
-section#thesis {
-  display: block;
-}
-
-.thesis {
-  display: flex;
-}
-
-.thesis .main {
-  padding-right: 1rem;
-}
-
-video {
-  width: 100%;
-  display: block;
-  padding-bottom: 1.5rem;
-}
-
-.thesis .main h2 {
-  text-align: left;
-}
-
-.img.fisma {
-  background-image: url('../images/thesis-fisma.jpg');
-}
-
-.img.now-and-then {
-  background-image: url('../images/thesis-now-and-then.jpg');
-}
-
-@media only screen and (max-width: 480px) {
-  #thesis aside {
-    display: none;
-  }
-
-  .thesis .main {
-    width: 100%;
-    padding-right: 0;
-  }
-
-  .thesis .content {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .thesis .main p {
-      display: none;
-  }
-  .thesis .main {
-      padding-right: 1rem;
-      width: 70%;
-  }
 }
 
 /* Footer section */
@@ -393,7 +313,6 @@ footer {
   display: flex;
   position: relative;
   padding: 2rem 1.5rem;
-  top: 4rem;
   justify-content: space-between;
   background-color: hsl(193, 10%, 23%);
   color: hsl(350, 10%, 90%);

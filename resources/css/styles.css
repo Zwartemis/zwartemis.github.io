@@ -624,24 +624,31 @@ form label {
 }
 
 form button {
-  font-family: 'Montserrat', sans-serif;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+}
+
+form div.button {
   color: hsl(193, 10%, 90%);
   background-color: hsl(82, 100%, 35%);
   padding: 0.15rem 0.5rem;
-  margin: 0.25rem 0.75rem;
+  margin: 0.5rem 0.75rem;
   margin-left: auto;
-  border-radius: 0;
   font-size: 1.25rem;
-  font-weight: 300;
-  line-height: 2rem;
+  width: 4.5rem;
 }
 
-form button:hover {
+form div.button:hover {
   background-color: hsl(174, 84%, 30%);
   font-weight: 500;
 }
 
-form button:active {
+form div.button:active {
     border: 0.1rem solid hsl(174, 84%, 30%);
 }
 

@@ -1,10 +1,10 @@
-/* Delete before publishing
+/* Delete before publishing */
 
 div, nav, span, footer, h2, h3, h4, h5, p, li, ul, ol, img, section {
  border: 1px solid blue;
 }
 
-Delete above here before publishing */
+/* Delete above here before publishing */
 
 /* Fonts */
 
@@ -39,6 +39,7 @@ html {
 }
 
 body {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   line-height: 1.45rem;
   color: hsl(193, 10%, 23%);
@@ -52,7 +53,6 @@ img {
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-weight: 500;
@@ -63,22 +63,15 @@ h2 {
 }
 
 h3 {
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   line-height: 1.65rem;
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
   margin: auto;
 }
 
-ul {
-  font-family: 'Montserrat', sans-serif;
-}
-
 a {
-  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   color: hsl(87, 82%, 39%);
 }
@@ -590,4 +583,71 @@ ul.resume {
 
 @media only screen and (min-width: 481px) and (max-width: 837px) {
 
+}
+
+/* Hire Page */
+.container.contact-form {
+  height: 30rem;
+  background-color: hsl(190, 10%, 95%);
+}
+
+form {
+  line-height: 3rem;
+  width: 100%;
+  max-height: 100%;
+  margin: 3rem 0;
+}
+
+div#form {
+  display: flex;
+  margin: auto;
+  width: 50%;
+  height: 30rem;
+  align-items: center;
+}
+
+input {
+  height: 1.5rem;
+  width: 90%;
+}
+
+form div {
+  padding: 0.25rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+form label {
+  padding-right: 0.5rem;
+}
+
+form button {
+  font-family: 'Montserrat', sans-serif;
+  color: hsl(193, 10%, 90%);
+  background-color: hsl(82, 100%, 35%);
+  padding: 0.15rem 0.5rem;
+  margin: 0.25rem 0.75rem;
+  margin-left: auto;
+  border-radius: 0;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+form button:hover {
+  background-color: hsl(174, 84%, 30%);
+  font-weight: 500;
+}
+
+form button:active {
+    border: 0.1rem solid hsl(174, 84%, 30%);
+}
+
+textarea#msg {
+  height: 13rem;
+  width: 88%;
+  resize: none;
+  overflow: scroll;
 }
